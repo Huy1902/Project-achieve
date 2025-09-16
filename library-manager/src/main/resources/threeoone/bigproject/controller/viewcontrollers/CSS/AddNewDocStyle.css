@@ -1,0 +1,66 @@
+.root {
+    -fx-background-color: #f5f5f5;
+    -fx-font-family: 'Arial';
+}
+
+.abel {
+    -fx-font-size: 20px;
+    -fx-text-fill: #333;
+}
+
+.blue-button {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: #fff;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-pref-height: 35px;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+    -fx-transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    -fx-background-color: #357abd;
+}
+
+.button:pressed {
+    -fx-background-color: #2c6ba0;
+}
+
+.text-field, .choice-box, .date-picker {
+    -fx-background-color: #DFF2EB;
+    -fx-border-color: #d6d6d6;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-transition: border-color 0.3s ease;
+}
+
+.text-field:focused, .choice-box:focused, .date-picker:focused {
+    -fx-border-color: #4a90e2;
+}
+
+.anchor-pane {
+    -fx-padding: 10;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    -fx-opacity: 0;
+    -fx-transition: opacity 1s ease-in-out;
+}
+
+.fade-in-shown {
+    -fx-opacity: 1;
+}
+
+.text-area {
+    -fx-control-inner-background: #DFF2EB;
+}
+

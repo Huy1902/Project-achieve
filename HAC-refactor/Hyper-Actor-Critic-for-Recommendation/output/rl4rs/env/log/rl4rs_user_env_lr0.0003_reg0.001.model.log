@@ -1,0 +1,45 @@
+Namespace(model='RL4RSUserResponse', reader='RL4RSDataReader')
+Namespace(seed=19, batch_size=128, lr=0.0003, epoch=2, model_path='output/rl4rs/env/rl4rs_user_env_lr0.0003_reg0.001.model', loss='bce', l2_coef=0.001, feature_dim=16, attn_n_head=2, hidden_dims=[256], dropout_rate=0.2, train_file='dataset/rl4rs/train.csv', val_file='dataset/rl4rs/test.csv', test_file='', n_worker=0, data_separator='@', item_meta_file='dataset/rl4rs/item_info.csv', max_seq_len=50, meta_data_separator=' ')
+Loading data filesLoad item meta data
+{'length': 625093, 'n_item': 283, 'item_vec_size': 40, 'user_portrait_len': 42, 'max_seq_len': 50, 'n_feedback': 2}
+epoch 1 training
+Iteration 10, loss: 0.6261648297309875
+Iteration 20, loss: 0.6304888308048249
+Iteration 30, loss: 0.6276504755020141
+Iteration 40, loss: 0.6285531044006347
+Iteration 50, loss: 0.6256499755382537
+Iteration 60, loss: 0.6240206867456436
+Iteration 70, loss: 0.6201206249850136
+Iteration 80, loss: 0.616136296838522
+Iteration 90, loss: 0.6130140317810906
+Iteration 100, loss: 0.6094469624757767
+Iteration 110, loss: 0.6029904228448868
+Iteration 120, loss: 0.5963042932748794
+Iteration 130, loss: 0.5904192060232163
+Iteration 140, loss: 0.5845176112651825
+Iteration 150, loss: 0.5796690052747726
+Iteration 160, loss: 0.5756323623657227
+Iteration 170, loss: 0.572803196310997
+Iteration 180, loss: 0.5713947290182113
+Iteration 190, loss: 0.5701282280683517
+Iteration 200, loss: 0.5677259576320648
+Iteration 210, loss: 0.568346626162529
+Iteration 220, loss: 0.5680105447769165
+Iteration 230, loss: 0.5676347476243973
+Iteration 240, loss: 0.5660631769895553
+Iteration 250, loss: 0.5677080905437469
+Iteration 260, loss: 0.5670705819129944
+Iteration 270, loss: 0.5669817262887955
+Iteration 280, loss: 0.5663258439302444
+Iteration 290, loss: 0.566250645518303
+Iteration 300, loss: 0.5677789545059204
+Iteration 310, loss: 0.5678515177965164
+Iteration 320, loss: 0.5677914762496948
+Iteration 330, loss: 0.5679507797956467
+Iteration 340, loss: 0.570212214589119
+Iteration 350, loss: 0.5682683497667312
+Iteration 360, loss: 0.5675775533914567
+Iteration 370, loss: 0.5671834206581116
+Iteration 380, loss: 0.5674274629354477
+Early stop manually
+Exit completely without evaluation? (y/n) (default n):

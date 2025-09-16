@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="threeoone.bigproject.controller.viewcontrollers.RegisterController">
+   <center>
+      <AnchorPane prefHeight="720.0" prefWidth="1200.0" styleClass="background" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="669.0" layoutY="146.0" styleClass="label-title" text="Account Register">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="signupButton" layoutX="731.0" layoutY="534.0" mnemonicParsing="false" onAction="#pressSignUp" styleClass="normal-button" text="Sign up!" />
+            <Label layoutX="658.0" layoutY="589.0" nodeOrientation="RIGHT_TO_LEFT" styleClass="label" text="Already have an account? ">
+               <graphic>
+                  <Hyperlink contentDisplay="RIGHT" onAction="#pressSignIn" styleClass="hyperlink" text="Log in" />
+               </graphic>
+            </Label>
+            <VBox layoutX="235.0" layoutY="203.0" prefHeight="316.0" prefWidth="302.0">
+               <children>
+                  <Label id="signUp" prefHeight="202.0" prefWidth="302.0" text="Sign up" wrapText="true">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Label>
+                  <Label alignment="TOP_LEFT" prefHeight="166.0" prefWidth="334.0" text="Create your account and start managing, NOW!" wrapText="true" />
+               </children>
+            </VBox>
+            <VBox layoutX="538.0" layoutY="203.0" prefHeight="314.0" prefWidth="454.0" styleClass="login-pane" stylesheets="@CSS/login.css">
+               <children>
+                  <Label text="Email">
+                     <VBox.margin>
+                        <Insets left="30.0" top="40.0" />
+                     </VBox.margin>
+                  </Label>
+
+                  <TextField fx:id="emailInputField" promptText="Enter your email">
+                     <VBox.margin>
+                        <Insets left="30.0" right="50.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label prefHeight="24.0" prefWidth="79.0" styleClass="label" text="User name">
+                     <VBox.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="username" promptText="Enter your username" styleClass="text-field">
+                     <VBox.margin>
+                        <Insets left="30.0" right="50.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label prefHeight="20.0" prefWidth="82.0" styleClass="label" text="Password">
+                     <VBox.margin>
+                        <Insets left="30.0" right="50.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <PasswordField fx:id="password" promptText="Enter your password" styleClass="password-field">
+                     <VBox.margin>
+                        <Insets left="30.0" right="50.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Label styleClass="label" text="Confirm">
+                     <VBox.margin>
+                        <Insets left="30.0" right="50.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <PasswordField fx:id="confirmpass" promptText="Confirm your password" styleClass="password-field">
+                     <VBox.margin>
+                        <Insets left="30.0" right="50.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Label fx:id="confirmMessage" prefHeight="20.0" styleClass="label">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+         </children>
+         <stylesheets>
+            <URL value="@CSS/RegisterStyle.css" />
+            <URL value="@CSS/general.css" />
+            <URL value="@CSS/login.css" />
+         </stylesheets>
+      </AnchorPane>
+   </center>
+</BorderPane>

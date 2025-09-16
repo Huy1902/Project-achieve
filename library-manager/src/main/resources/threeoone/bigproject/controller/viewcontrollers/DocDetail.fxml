@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane fx:id="root" dividerPositions="0.5" styleClass="background" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="threeoone.bigproject.controller.viewcontrollers.DocumentDetailController">
+   <items>
+      <VBox maxWidth="89.0" prefHeight="738.0" prefWidth="89.0" SplitPane.resizableWithParent="false">
+         <children>
+            <fx:include maxWidth="89.0" minWidth="80.0" prefWidth="89.0" source="MenuBar.fxml" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+      <BorderPane>
+         <center>
+            <GridPane prefHeight="648.0" prefWidth="1146.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1118.2000732421875" minWidth="10.0" prefWidth="473.5999755859375" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="672.0000244140624" minWidth="10.0" prefWidth="672.0000244140624" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="633.2000122070312" minHeight="10.0" prefHeight="341.20001220703125" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="402.39996948242185" minHeight="10.0" prefHeight="307.1999877929687" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="342.0" prefWidth="704.0" GridPane.halignment="LEFT">
+                     <children>
+                        <ImageView fx:id="cover" fitHeight="264.0" fitWidth="282.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ImageView>
+                        <Button fx:id="borrow" mnemonicParsing="false" onAction="#toBorrow" onMouseClicked="#toBorrow" prefHeight="59.0" prefWidth="98.0" styleClass="green-button" text="Borrow">
+                           <stylesheets>
+                              <URL value="@CSS/general.css" />
+                              <URL value="@CSS/docDetail.css" />
+                           </stylesheets>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="342.0" prefWidth="675.0" styleClass="pane" stylesheets="@CSS/general.css" GridPane.columnIndex="1">
+                     <children>
+                        <Label id="title" fx:id="bookName" prefHeight="135.0" prefWidth="662.0" text="Loading Title">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <HBox id="author" prefHeight="41.0" prefWidth="450.0">
+                           <children>
+                              <Label fx:id="author" prefHeight="25.0" prefWidth="651.0" text="Loading" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="42.0" prefWidth="662.0">
+                           <children>
+                              <Label prefHeight="54.0" prefWidth="114.0" text="Category:" />
+                              <Label fx:id="category" prefHeight="32.0" prefWidth="553.0" text="Loading" />
+                           </children>
+                        </HBox>
+                        <TextArea id="description" fx:id="bookDescription" prefHeight="200.0" prefWidth="200.0" styleClass="pane" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, " wrapText="true" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <TableView fx:id="lendings" prefHeight="307.0" prefWidth="407.0" styleClass="table" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columns>
+                        <TableColumn fx:id="MemberID" prefWidth="88.00000154972076" text="Member ID" />
+                      <TableColumn fx:id="MemberName" prefWidth="240.00005340576172" text="Member's Name" />
+                      <TableColumn fx:id="BorrowDate" prefWidth="199.20004272460938" text="Borrow Date" />
+                        <TableColumn fx:id="ReturnDate" prefWidth="140.79998779296875" text="Return Date" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </TableView>
+                  <GridPane alignment="CENTER" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="301.39996948242185" minHeight="10.0" prefHeight="221.60003662109375" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="148.60001220703126" minHeight="5.400030517578159" prefHeight="86.39996337890625" valignment="CENTER" vgrow="ALWAYS" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane alignment="CENTER" prefHeight="131.0" prefWidth="333.0" styleClass="pane">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints />
+                            <RowConstraints maxHeight="68.8" minHeight="10.0" prefHeight="40.00001220703125" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="59.199987792968756" minHeight="10.0" prefHeight="45.6000244140625" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="46.99997558593749" minHeight="10.0" prefHeight="35.20000000000002" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="44.400000000000006" minHeight="10.0" prefHeight="44.400000000000006" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="44.400000000000006" minHeight="10.0" prefHeight="44.400000000000006" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="ISBN" prefHeight="52.0" prefWidth="260.0" text="Loading" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="uploader" prefHeight="55.0" prefWidth="266.0" text="Loading" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="uploadedDate" prefHeight="66.0" prefWidth="268.0" text="Loading" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="79.0" prefWidth="195.0" text="ISBN:" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="87.0" prefWidth="220.0" text="Uploader:" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="70.0" prefWidth="219.0" text="Uploaded Date:" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="55.0" prefWidth="170.0" text="Copies:" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="copies" prefHeight="59.0" prefWidth="254.0" text="Loading" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="48.0" prefWidth="163.0" text="Available for lending" GridPane.rowIndex="5" />
+                              <Label fx:id="available" prefHeight="54.0" prefWidth="242.0" text="Loading" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="70.0" right="70.0" top="15.0" />
+                           </GridPane.margin>
+                        </GridPane>
+                        <HBox alignment="CENTER" prefHeight="41.0" prefWidth="474.0" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="ReadPDF" mnemonicParsing="false" onAction="#toPDFReader" onMouseClicked="#toPDFReader" prefHeight="51.0" prefWidth="94.0" styleClass="normal-button" text="Read PDF">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button id="edit" fx:id="editDocument" mnemonicParsing="false" onAction="#toEdit" onMouseClicked="#toEdit" prefHeight="51.0" prefWidth="94.0" styleClass="normal-button" text="Edit">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </center>
+         <top>
+            <Label id="header" prefHeight="70.0" prefWidth="330.0" text="Document detail" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="20.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+      </BorderPane>
+   </items>
+   <stylesheets>
+      <URL value="@CSS/general.css" />
+      <URL value="@CSS/docDetail.css" />
+   </stylesheets>
+</SplitPane>

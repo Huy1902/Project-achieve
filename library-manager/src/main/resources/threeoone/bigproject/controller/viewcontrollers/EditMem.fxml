@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<SplitPane fx:id="root" dividerPositions="0.06942590120160214" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" styleClass="background" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="threeoone.bigproject.controller.viewcontrollers.EditMemController">
+  <items>
+      <fx:include minWidth="89.0" source="MenuBar.fxml" />
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <GridPane prefHeight="136.0" prefWidth="991.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label id="header" text="Edit Member Information" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </top>
+         <bottom>
+            <GridPane prefHeight="159.0" prefWidth="991.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#pressSubmit" prefHeight="49.0" prefWidth="71.0" styleClass="green-button" text="Submit" GridPane.columnIndex="1" />
+                  <Button fx:id="resetButton" mnemonicParsing="false" onAction="#fulFillInfo" prefHeight="42.0" prefWidth="65.0" styleClass="red-button" text="Reset" />
+               </children>
+            </GridPane>
+         </bottom>
+         <center>
+            <GridPane styleClass="pane" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="159.6000244140625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="951.9999755859374" minWidth="10.0" prefWidth="951.9999755859374" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="ID" />
+                  <Label text="Name" GridPane.rowIndex="1" />
+                  <Label fx:id="id" prefHeight="21.0" prefWidth="860.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin></TextField>
+                  <Label text="Phone number" GridPane.rowIndex="2" />
+                  <Label text="Address" GridPane.rowIndex="3" />
+                  <Label text="Email" GridPane.rowIndex="4" />
+                  <TextField fx:id="phoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="address" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin></TextField>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+  </items>
+   <stylesheets>
+      <URL value="@CSS/DocOverviewStyle.css" />
+      <URL value="@CSS/general.css" />
+   </stylesheets>
+</SplitPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox prefHeight="40.0" prefWidth="602.0" stylesheets="@CSS/general.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="threeoone.bigproject.controller.viewcontrollers.MemberSearchBarController">
+   <children>
+      <TextField fx:id="search" prefHeight="26.0" prefWidth="200.0" promptText="Choose your search type and enter text here..." HBox.hgrow="SOMETIMES">
+         <HBox.margin>
+            <Insets left="20.0" right="20.0" top="5.0" />
+         </HBox.margin>
+      </TextField>
+      <ChoiceBox fx:id="type" prefHeight="36.0" prefWidth="151.0" stylesheets="@CSS/general.css" HBox.hgrow="SOMETIMES">
+         <HBox.margin>
+            <Insets top="2.0" />
+         </HBox.margin>
+      </ChoiceBox>
+      <Button fx:id="searchButton" mnemonicParsing="false" onAction="#pressSearch" prefHeight="42.0" prefWidth="91.0" styleClass="normal-button" text="Search!">
+         <HBox.margin>
+            <Insets left="20.0" right="15.0" />
+         </HBox.margin>
+      </Button>
+   </children>
+</HBox>

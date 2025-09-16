@@ -1,0 +1,17 @@
+.login-pane {
+    -fx-background-color: #FFFAED;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+.login-text {
+    -fx-background-color: #E1D9D1;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+#loginText {
+    -fx-font-family: "Lucida Bright", fantasy;
+    -fx-font-size: 50px;
+    -fx-font-weight: BOLD;
+}
+

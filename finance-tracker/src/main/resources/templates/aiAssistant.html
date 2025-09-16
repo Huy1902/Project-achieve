@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+    <style>
+        /* Ensure body and html take full height and remove default margin */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrollbars on the body itself */
+        }
+
+        /* Container for the entire page content AFTER the fixed sidebar */
+        /* It needs a margin to avoid being overlapped by the fixed sidebar */
+        .content-wrapper {
+            /* IMPORTANT: Set this margin equal to the width of your fixed sidebar */
+            /* Adjust this value (e.g., 250px, 300px) based on your actual sidebar width */
+            margin-left: 280px;
+            height: 100vh; /* Fill viewport height */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        /* Style the main content area within the wrapper */
+        .main-content-area {
+            background-color: #FDF4FE;
+            flex-grow: 1; /* Allow this area to grow */
+            padding: 1rem; /* Padding inside the content area */
+            display: flex; /* Use flexbox to manage content inside */
+            flex-direction: column; /* Stack elements vertically */
+            overflow: hidden; /* Prevent this container from overflowing */
+            /* height: 100%; Removed, rely on flex-grow in the wrapper */
+        }
+
+        /* Style the iframe to fill its container */
+        .chatbot-iframe {
+            flex-grow: 1; /* Allow iframe to take available space in the column */
+            width: 100%;
+            border: none; /* Remove default iframe border */
+            display: block; /* Ensure it behaves like a block element */
+        }
+
+        /* Note: Styling for the fixed sidebar itself is in navbar.html */
+        /* Ensure the sidebar in navbar.html has a defined width (e.g., 280px) */
+
+    </style>
+</head>
+<body>
+<div th:replace="navbar :: sidebar('ai-chatbot')"></div>
+
+<div class="content-wrapper">
+    <div class="main-content-area">
+        <div th:if="${errorMessage}" class="alert alert-danger mb-2" role="alert" th:text="${errorMessage}">
+            Error initializing chat.
+        </div>
+
+        <iframe id="chatbotFrame"
+                class="chatbot-iframe"
+                title="Chatbot Assistant">
+            <p>Your browser does not support iframes. Cannot load chatbot.</p>
+        </iframe>
+    </div>
+</div>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    // Get the URL (with token) passed from the Spring Controller via the Model
+    const streamlitUrl = /*[[${streamlitUrl}]]*/ null; // Default to null if model attribute is missing
+
+    const iframe = document.getElementById('chatbotFrame');
+
+    // Check if the iframe element exists AND the URL was provided and is not empty
+    if (iframe && streamlitUrl && streamlitUrl.trim() !== '') {
+        console.log('Setting iframe src to:', streamlitUrl); // Log for debugging
+        iframe.src = streamlitUrl;
+    } else if (iframe) {
+        // Handle the case where the URL is missing or empty - show an error or leave blank
+        console.error('Streamlit URL was not provided in the model or is empty. Cannot load chatbot.');
+        iframe.contentWindow.document.body.innerHTML = '<p style="padding: 1rem; color: red;">Error: Chat session could not be initialized. Please try again.</p>';
+    } else {
+        console.error('Could not find iframe element (#chatbotFrame).');
+    }
+    /*]]>*/
+</script>
+
+</body>
+</html>

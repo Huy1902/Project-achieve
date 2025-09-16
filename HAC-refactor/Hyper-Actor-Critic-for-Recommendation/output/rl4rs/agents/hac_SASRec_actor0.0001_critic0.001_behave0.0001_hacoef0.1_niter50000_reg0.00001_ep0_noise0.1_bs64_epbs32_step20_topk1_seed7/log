@@ -1,0 +1,2 @@
+Namespace(env_class='RL4RSEnvironment_GPU', policy_class='SASRec', critic_class='GeneralCritic', agent_class='HAC', facade_class='OneStageFacade_HyperAction')
+Loading environment

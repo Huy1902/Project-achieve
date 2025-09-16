@@ -1,0 +1,38 @@
+.green-button {
+    -fx-background-color: #32CD32;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-border-color: #000000;
+}
+.green-button:hover {
+    -fx-background-color: #006400;
+    -fx-underline:true;
+    -fx-cursor: hand;
+}
+
+#title {
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Times New Roman'
+    -fx-wrap-text: true;
+}
+
+#author {
+    -fx-font-size: 15;
+    -fx-font-family: "Lucida Bright";
+
+    -fx-opacity: 0.7;
+}
+
+.label {
+    -fx-padding: 5px;
+}
+
+
+
+#noPDF {
+    -fx-opacity: 0.2;
+}
+#description {
+    -fx-control-inner-background: #7AB2D3;
+}
