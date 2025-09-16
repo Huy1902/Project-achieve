@@ -59,7 +59,7 @@ class GoogleAPIServiceTest extends ApplicationTest {
   void testFindBookByISBN() {
     googleAPIService.setGoogleBooksTimeout(5000);
     googleAPIService.setGoogleBooksURL("https://www.googleapis.com/books/v1/volumes?q=");
-    googleAPIService.setGoogleBooksKey("AIzaSyAd_eIQHnxVpgfYLxkY7cOo_1uHv5SphP8");
+    googleAPIService.setGoogleBooksKey("");
     Document document = googleAPIService.findBookByISBN("0735619670");
     assertEquals("Code Complete", document.getName());
   }
