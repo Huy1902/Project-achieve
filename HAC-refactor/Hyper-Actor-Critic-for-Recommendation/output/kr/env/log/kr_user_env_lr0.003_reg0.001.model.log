@@ -1,0 +1,6 @@
+Namespace(model='KRUserResponse', reader='KRDataReader')
+Namespace(seed=19, batch_size=128, lr=0.003, epoch=2, model_path='output/kr/env/kr_user_env_lr0.003_reg0.001.model', loss='bce', l2_coef=0.001, feature_dim=16, attn_n_head=2, hidden_dims=[256], dropout_rate=0.2, train_file='dataset/kr/KR_seq_data_train.meta', val_file='dataset/kr/KR_seq_data_test.meta', test_file='', n_worker=4, data_separator='@', user_meta_file='dataset/kr/uEmb.npy', item_meta_file='dataset/kr/iEmb.npy', max_seq_len=50, meta_data_separator='\\t')
+init ml1m reader
+Loading data filesLoad item meta data
+{'length': 72757, 'n_item': 11643, 'item_vec_size': 32, 'user_portrait_len': 32, 'max_seq_len': 50, 'n_feedback': 2}
+{'length': 72757, 'n_item': 11643, 'item_vec_size': 32, 'user_portrait_len': 32, 'max_seq_len': 50, 'n_feedback': 2}

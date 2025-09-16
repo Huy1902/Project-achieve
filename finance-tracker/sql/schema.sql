@@ -1,0 +1,26 @@
+DROP TABLE IF EXISTS transaction;
+DROP TABLE IF EXISTS category;
+DROP TABLE IF EXISTS app_user;
+
+CREATE TABLE app_user (
+	id SERIAL PRIMARY KEY,
+	username VARCHAR(128) NOT NULL UNIQUE CHECK (LENGTH(TRIM(username)) > 0),
+	email VARCHAR(128) NOT NULL UNIQUE CHECK(LENGTH(TRIM(email)) > 0),
+	password VARCHAR(68) NOT NULL CHECK (LENGTH(password) > 0)
+);
+
+CREATE TABLE category (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(128) NOT NULL CHECK (LENGTH(TRIM(name)) > 0),
+	color VARCHAR(7) NOT NULL CHECK (LENGTH(TRIM(color)) = 7),
+	owner_id INTEGER REFERENCES app_user NOT NULL
+);
+
+CREATE TABLE transaction (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(256) NOT NULL CHECK (LENGTH(TRIM(name)) > 0),
+	value NUMERIC(20, 2) NOT NULL,
+	notes TEXT,
+	timestamp TIMESTAMP NOT NULL,
+	category_id INTEGER REFERENCES category NOT NULL
+)

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane fx:id="root" dividerPositions="0.07016666666666667" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" styleClass="background" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="threeoone.bigproject.controller.viewcontrollers.LendingDetailController">
+    <items>
+      <VBox minWidth="89.0" prefHeight="200.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
+         <children>
+              <fx:include maxWidth="89.0" minWidth="88.0" prefWidth="89.0" source="MenuBar.fxml" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+        <BorderPane prefHeight="200.0" prefWidth="200.0">
+            <bottom>
+                <GridPane prefHeight="92.0" prefWidth="1010.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#pressReturn" text="Return" />
+                        <Button mnemonicParsing="false" onAction="#pressSubmit" styleClass="green-button" text="Submit" GridPane.columnIndex="1" />
+                    </children>
+                </GridPane>
+            </bottom>
+            <center>
+            <SplitPane dividerPositions="0.507172131147541" styleClass="pane" BorderPane.alignment="CENTER">
+               <items>
+                      <SplitPane dividerPositions="0.19322709163346613" orientation="VERTICAL" prefHeight="504.0" prefWidth="364.0">
+                          <items>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="pane">
+                           <children>
+                                      <Label text="User Information" />
+                           </children>
+                        </VBox>
+                              <GridPane styleClass="pane">
+                                  <columnConstraints>
+                                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="227.0" minWidth="10.0" prefWidth="139.0" />
+                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="377.0" minWidth="10.0" prefWidth="353.0" />
+                                  </columnConstraints>
+                                  <rowConstraints>
+                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  </rowConstraints>
+                                  <children>
+                                      <Label text="ID" />
+                                      <Label text="Name" GridPane.rowIndex="1" />
+                                      <Label fx:id="memberName" prefHeight="17.0" prefWidth="447.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Phone Number" GridPane.rowIndex="2" />
+                              <Label fx:id="memberAddress" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="memberPhone" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Address" GridPane.rowIndex="3" />
+                              <Label text="Email" GridPane.rowIndex="4" />
+                              <Label fx:id="memberEmail" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="memberID" promptText="Required" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin></TextField>
+                                  </children>
+                              </GridPane>
+                          </items>
+                      </SplitPane>
+                      <SplitPane dividerPositions="0.19288389513108614" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                          <items>
+                              <VBox alignment="CENTER" prefHeight="94.0" prefWidth="500.0" styleClass="pane">
+                                  <children>
+                                      <Label text="Document Information" />
+                                  </children>
+                              </VBox>
+                              <GridPane styleClass="pane">
+                                  <columnConstraints>
+                                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="125.0" />
+                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="454.0" minWidth="10.0" prefWidth="359.0" />
+                                  </columnConstraints>
+                                  <rowConstraints>
+                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                      <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="139.0" vgrow="SOMETIMES" />
+                                  </rowConstraints>
+                                  <children>
+                                      <Label text="ID" />
+                                      <Label text="Name" GridPane.rowIndex="1" />
+                                      <Label text="Author" GridPane.rowIndex="2" />
+                                      <Label text="Category" GridPane.rowIndex="3" />
+                                      <Label text="Cover Photo" GridPane.rowIndex="5" />
+                              <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                 <children>
+                                            <ImageView fx:id="docPhoto" fitHeight="178.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </VBox>
+                                      <Label fx:id="docID" GridPane.columnIndex="1" />
+                                      <Label fx:id="docName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                      <Label fx:id="docAuthor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                      <Label fx:id="docCategory" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Description" GridPane.rowIndex="4" />
+                              <Label fx:id="docDescription" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                  </children>
+                              </GridPane>
+                          </items>
+                      </SplitPane>
+               </items>
+            </SplitPane>
+            </center>
+            <top>
+                <VBox alignment="CENTER" prefHeight="84.0" prefWidth="1010.0" styleClass="background" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label id="header" text="Lending Detail" />
+                    </children>
+                </VBox>
+            </top>
+        </BorderPane>
+    </items>
+   <stylesheets>
+      <URL value="@CSS/DocOverviewStyle.css" />
+      <URL value="@CSS/general.css" />
+   </stylesheets>
+</SplitPane>

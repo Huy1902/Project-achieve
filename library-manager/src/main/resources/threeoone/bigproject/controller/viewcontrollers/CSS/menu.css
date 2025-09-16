@@ -1,0 +1,17 @@
+#today-document {
+    -fx-background-radius: 2px;
+    -fx-border-radius: 2px;
+    -fx-border-color: #2C5A77;
+    -fx-background-color: #7AB2D3;
+    transition: all 0.3s ease;
+}
+#today-document:hover{
+    -fx-cursor: hand;
+    -fx-opacity: 0.7;
+}
+
+#today-document-title {
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+        -fx-wrap-text: true;
+}

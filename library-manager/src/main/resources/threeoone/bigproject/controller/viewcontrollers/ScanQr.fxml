@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" prefHeight="720.0" prefWidth="1200.0" styleClass="background" stylesheets="@CSS/general.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="threeoone.bigproject.controller.viewcontrollers.ScanQrController">
+   <top>
+      <VBox alignment="CENTER" prefHeight="120.0" prefWidth="1112.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="header" text="Scan QR" />
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <GridPane prefHeight="428.0" prefWidth="1112.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="684.0" minWidth="10.0" prefWidth="552.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="567.0" minWidth="10.0" prefWidth="560.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" onDragDropped="#dragImage" onDragOver="#dragOver">
+               <children>
+                  <ImageView fx:id="qrImage" fitHeight="452.0" fitWidth="393.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <Label text="This is your ISBN which gets from QR Code" />
+                  <TextField fx:id="isbn" editable="false">
+                     <VBox.margin>
+                        <Insets right="5.0" top="100.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#pressGetISBN" styleClass="normal-button" text="Get ISBN">
+                     <VBox.margin>
+                        <Insets top="100.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <GridPane prefHeight="92.0" prefWidth="1112.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#pressChoose" styleClass="green-button" text="Choose this ISBN" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>

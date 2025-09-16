@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane fx:id="root" dividerPositions="0.0645412130637636" prefHeight="720.0" prefWidth="1200.0" styleClass="background" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="threeoone.bigproject.controller.viewcontrollers.AddNewDocController">
+   <items>
+        <fx:include maxWidth="89.0" minWidth="89.0" prefWidth="89.0" source="MenuBar.fxml" />
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <VBox alignment="CENTER" prefHeight="65.0" prefWidth="1082.0" BorderPane.alignment="CENTER">
+               <children>
+                    <Label id="header" prefHeight="56.0" prefWidth="234.0" text="Add New Book" textAlignment="CENTER" />
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
+               <items>
+                  <VBox alignment="CENTER" maxWidth="209.0" prefHeight="548.0" prefWidth="209.0" styleClass="background">
+                     <children>
+                        <ImageView fx:id="docCover" fitHeight="252.0" fitWidth="263.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+                  <GridPane gridLinesVisible="true" prefHeight="362.0" prefWidth="1112.0" styleClass="pane">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="414.0" minWidth="10.0" prefWidth="117.0" />
+                      <ColumnConstraints hgrow="ALWAYS" maxWidth="984.0" minWidth="10.0" prefWidth="720.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="45.20000305175781" vgrow="ALWAYS" />
+                      <RowConstraints maxHeight="74.19999389648436" minHeight="10.0" prefHeight="74.19999389648436" vgrow="ALWAYS" />
+                      <RowConstraints maxHeight="68.60001220703127" minHeight="10.0" prefHeight="57.00000610351563" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="42.40001220703127" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="167.2000244140625" vgrow="ALWAYS" />
+                        <RowConstraints maxHeight="75.79998779296875" minHeight="10.0" prefHeight="75.79998779296875" vgrow="ALWAYS" />
+                        <RowConstraints maxHeight="89.59999999999997" minHeight="10.0" prefHeight="76.80001220703122" vgrow="ALWAYS" />
+                    </rowConstraints>
+                     <children>
+                          <Label styleClass="label fade-in" text="Title" />
+                          <TextField fx:id="name" prefHeight="28.0" prefWidth="527.0" promptText="Required" styleClass="text-field fade-in" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="50.0" />
+                           </GridPane.margin></TextField>
+                        <Label text="Author" GridPane.rowIndex="1" />
+                        <TextField fx:id="author" prefHeight="25.0" prefWidth="507.0" promptText="Required" styleClass="text-field fade-in" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="50.0" />
+                           </GridPane.margin></TextField>
+                          <Label styleClass="label fade-in" text="Categories" GridPane.rowIndex="2" />
+                        <TextField fx:id="categories" promptText="Required (default is unknown)" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="50.0" />
+                           </GridPane.margin></TextField>
+                          <Label styleClass="label fade-in" text="ISBN" GridPane.rowIndex="3" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                           <children>
+                                <TextField fx:id="isbn" onKeyPressed="#fulfillISBN" prefHeight="29.0" prefWidth="594.0" promptText="Optional (Can be fulfilled to get info about doc through Google API)" styleClass="text-field fade-in">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" onAction="#pressQR" prefHeight="29.0" prefWidth="67.0" text="QR Scan" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="numOfCopies" promptText="Required (Only number)" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="50.0" />
+                           </GridPane.margin></TextField>
+                        <TextArea fx:id="description" prefHeight="11.0" prefWidth="657.0" styleClass="text-area" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="20.0" left="10.0" right="50.0" top="20.0" />
+                           </GridPane.margin>
+                        </TextArea>
+                          <Label styleClass="label fade-in" text="Description" GridPane.rowIndex="4" />
+                          <Label styleClass="label fade-in" text="Number of copies" GridPane.rowIndex="5" />
+                          <Label styleClass="label fade-in" text="Document" GridPane.rowIndex="6" />
+                          <Button fx:id="chooseButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="1074.0" styleClass="button fade-in" text="No File Selected" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="50.0" />
+                           </GridPane.margin></Button>
+                     </children>
+                  </GridPane>
+               </items>
+            </SplitPane>
+         </center>
+         <bottom>
+            <GridPane prefHeight="79.0" prefWidth="1112.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="536.2000122070312" minWidth="10.0" prefWidth="304.20001220703125" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="777.7999877929688" minWidth="10.0" prefWidth="777.7999877929688" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                    <Button fx:id="submitButton" mnemonicParsing="false" onAction="#pressSubmit" styleClass="green-button" text="Submit" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </bottom>
+      </BorderPane>
+   </items>
+   <stylesheets>
+      <URL value="@CSS/AddNewDocStyle.css" />
+      <URL value="@CSS/general.css" />
+   </stylesheets>
+</SplitPane>

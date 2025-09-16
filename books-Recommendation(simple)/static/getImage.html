@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post an Image Test</title>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+</head>
+<style>
+    /* mirror the image */
+    video, canvas {
+        transform: scale(-1, 1); /* For Firefox (& IE) */
+        -webkit-transform: scale(-1, 1); /* For Chrome & Opera (& Safari) */
+    }
+</style>
+<body>
+    <video id="myVideo" autoplay></video>
+    <button id="captureButton">Capture Image</button> <!-- Capture button -->
+    <button id="switchButton">Switch Camera</button> <!-- Switch button -->
+
+    <script>
+        let v = document.getElementById("myVideo");
+        let captureButton = document.getElementById("captureButton"); // Get the capture button element
+        let switchButton = document.getElementById("switchButton"); // Get the switch button element
+        let currentStream; // Keep track of the current stream
+        let usingBackCamera = true; // Track if the back camera is being used
+
+        // Create a canvas to grab an image for upload
+        let imageCanvas = document.createElement('canvas');
+        let imageCtx = imageCanvas.getContext("2d");
+
+        // Add file blob to a form and post
+        function postFile(file) {
+            let formdata = new FormData();
+            formdata.append("image", file);
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://books-recommendation-2-6b0b.onrender.com/save-image', true);
+            xhr.onload = function () {
+                if (this.status === 200)
+                    console.log(this.response);
+                else
+                    console.error(xhr);
+            };
+            xhr.send(formdata);
+        }
+
+        // Get the image from the canvas
+        function sendImagefromCanvas() {
+            // Make sure the canvas is set to the current video size
+            imageCanvas.width = v.videoWidth;
+            imageCanvas.height = v.videoHeight;
+
+            imageCtx.drawImage(v, 0, 0, v.videoWidth, v.videoHeight);
+
+            // Convert the canvas to blob and post the file
+            imageCanvas.toBlob(postFile, 'image/jpeg');
+        }
+
+        // Take a picture when the button is clicked
+        captureButton.onclick = function () {
+            console.log('Button clicked');
+            sendImagefromCanvas();
+        };
+
+        // Switch the camera
+        switchButton.onclick = function () {
+            usingBackCamera = !usingBackCamera;
+            switchCamera();
+        };
+
+        // Function to switch the camera
+        function switchCamera() {
+            if (currentStream) {
+                currentStream.getTracks().forEach(track => track.stop());
+            }
+
+            let constraints = {
+                video: {
+                    facingMode: usingBackCamera ? { exact: "environment" } : "user",
+                    width: 1280,
+                    height: 720
+                },
+                audio: false
+            };
+
+            navigator.mediaDevices.getUserMedia(constraints)
+                .then(stream => {
+                    currentStream = stream;
+                    v.srcObject = stream;
+                })
+                .catch(err => {
+                    console.log('navigator.getUserMedia error: ', err);
+                });
+        }
+
+        window.onload = function () {
+            switchCamera(); // Start with the back camera
+        };
+    </script>
+</body>
+</html>

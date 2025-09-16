@@ -1,0 +1,51 @@
+Namespace(env_class='ML1MEnvironment_GPU', policy_class='SASRec', critic_class='GeneralCritic', agent_class='HAC', facade_class='OneStageFacade_HyperAction')
+Loading environment
+Environment arguments: 
+Namespace(seed=19, batch_size=128, lr=0.001, epoch=2, model_path='output/ml1m/env/ml1m_user_env_lr0.001_reg0.0003_eval.model', loss='bce', l2_coef=0.0003, feature_dim=16, attn_n_head=2, hidden_dims=[256], dropout_rate=0.2, train_file='dataset/ml1m/ml1m_b_test.csv', val_file='dataset/ml1m/ml1m_b_test.csv', test_file='', n_worker=4, data_separator='@', user_meta_file='dataset/ml1m/user_info.npy', item_meta_file='dataset/ml1m/item_info.npy', max_seq_len=50, meta_data_separator=' ')
+Loading raw data
+init ml1m reader
+Loading data filesLoad item meta data
+Loading user response model
+{'length': 713, 'n_item': 1682, 'item_vec_size': 19, 'user_portrait_len': 24, 'max_seq_len': 50}
+Load (checkpoint) from output/ml1m/env/ml1m_user_env_lr0.001_reg0.0003_eval.model.checkpoint
+Setup policy:
+SASRec(
+  (item_map): Linear(in_features=19, out_features=32, bias=True)
+  (pos_emb): Embedding(50, 32)
+  (emb_dropout): Dropout(p=0.1, inplace=False)
+  (emb_norm): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+  (transformer): TransformerEncoder(
+    (layers): ModuleList(
+      (0-1): 2 x TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=32, out_features=32, bias=True)
+        )
+        (linear1): Linear(in_features=32, out_features=64, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (linear2): Linear(in_features=64, out_features=32, bias=True)
+        (norm1): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+        (dropout1): Dropout(p=0.1, inplace=False)
+        (dropout2): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+)
+Setup critic:
+GeneralCritic(
+  (net): DNN(
+    (layers): Sequential(
+      (0): Linear(in_features=64, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.2, inplace=False)
+      (3): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (4): Linear(in_features=256, out_features=64, bias=True)
+      (5): ReLU()
+      (6): Dropout(p=0.2, inplace=False)
+      (7): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (8): Linear(in_features=64, out_features=1, bias=True)
+    )
+  )
+)
+Setup agent with data-specific facade
+Namespace(seed=7, cuda=-1, env_path='output/ml1m/env/ml1m_user_env_lr0.001_reg0.0003_eval.env', reward_func='mean_with_cost', max_step_per_episode=20, initial_temper=20, urm_log_path='output/ml1m/env/log/ml1m_user_env_lr0.001_reg0.0003_eval.model.log', temper_sweet_point=0.9, temper_prob_lag=100, sasrec_n_layer=2, sasrec_d_model=32, sasrec_d_forward=64, sasrec_n_head=4, sasrec_dropout=0.1, critic_hidden_dims=[256, 64], critic_dropout_rate=0.2, gamma=0.9, n_iter=[50000], train_every_n_step=1, initial_greedy_epsilon=0.0, final_greedy_epsilon=0.0, elbow_greedy=0.1, check_episode=10, with_eval=False, save_path='output/ml1m/agents/hac_SASRec_actor0.0001_critic0.001_behave0_hacoef0.1_niter50000_reg0.00001_ep0_noise0.1_bs64_epbs32_step20_topk1_seed7/model', episode_batch_size=32, batch_size=64, actor_lr=0.0001, critic_lr=0.001, actor_decay=1e-05, critic_decay=1e-05, target_mitigate_coef=0.01, behavior_lr=0.0, behavior_decay=1e-05, hyper_actor_coef=0.1, slate_size=9, buffer_size=100000, start_timestamp=2000, noise_var=0.1, q_laplace_smoothness=0.5, topk_rate=1.0, empty_start_rate=0.0, test=True, device='cpu')

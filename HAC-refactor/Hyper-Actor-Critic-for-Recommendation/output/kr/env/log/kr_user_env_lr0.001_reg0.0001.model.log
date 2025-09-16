@@ -1,0 +1,64 @@
+Namespace(model='KRUserResponse', reader='KRDataReader')
+Namespace(seed=19, batch_size=128, lr=0.001, epoch=2, model_path='output/kr/env/kr_user_env_lr0.001_reg0.0001.model', loss='bce', l2_coef=0.0001, feature_dim=16, attn_n_head=2, hidden_dims=[256], dropout_rate=0.2, train_file='dataset/kr/KR_seq_data_train.meta', val_file='dataset/kr/KR_seq_data_test.meta', test_file='', n_worker=4, data_separator='@', user_meta_file='dataset/kr/uEmb.npy', item_meta_file='dataset/kr/iEmb.npy', max_seq_len=50, meta_data_separator='\\t')
+init ml1m reader
+Loading data filesLoad item meta data
+{'length': 72757, 'n_item': 11643, 'item_vec_size': 32, 'user_portrait_len': 32, 'max_seq_len': 50, 'n_feedback': 2}
+{'length': 72757, 'n_item': 11643, 'item_vec_size': 32, 'user_portrait_len': 32, 'max_seq_len': 50, 'n_feedback': 2}
+epoch 1 training
+Iteration 10, loss: 0.7111599743366241
+Iteration 20, loss: 0.7051764547824859
+Iteration 30, loss: 0.7000072956085205
+Iteration 40, loss: 0.696302130818367
+Iteration 50, loss: 0.6934131491184234
+Iteration 60, loss: 0.6913885702689488
+Iteration 70, loss: 0.6885072529315949
+Iteration 80, loss: 0.6859277591109276
+Iteration 90, loss: 0.6837078167332543
+Iteration 100, loss: 0.6813668757677078
+Iteration 110, loss: 0.6760828191041947
+Iteration 120, loss: 0.6718665021657944
+Iteration 130, loss: 0.6682891792058945
+Iteration 140, loss: 0.664639623761177
+Iteration 150, loss: 0.6614783781766892
+Iteration 160, loss: 0.6576883131265641
+Iteration 170, loss: 0.6555766928195953
+Iteration 180, loss: 0.6538142663240433
+Iteration 190, loss: 0.652345045208931
+Iteration 200, loss: 0.6511308735609055
+Iteration 210, loss: 0.6501131629943848
+Iteration 220, loss: 0.6489527440071106
+Iteration 230, loss: 0.6480870342254639
+Iteration 240, loss: 0.6482095432281494
+Iteration 250, loss: 0.6483332753181458
+Iteration 260, loss: 0.6479120844602585
+Iteration 270, loss: 0.6471355754137039
+Iteration 280, loss: 0.6470289266109467
+Iteration 290, loss: 0.6468344467878342
+Iteration 300, loss: 0.646780281662941
+Iteration 310, loss: 0.6469283747673035
+Iteration 320, loss: 0.6465061873197555
+Iteration 330, loss: 0.6470355671644211
+Iteration 340, loss: 0.6468901127576828
+Iteration 350, loss: 0.6462910681962967
+Iteration 360, loss: 0.6467357325553894
+Iteration 370, loss: 0.6469474506378173
+Iteration 380, loss: 0.6460087883472443
+Iteration 390, loss: 0.6457315695285797
+Iteration 400, loss: 0.6457028418779374
+Iteration 410, loss: 0.6451869022846222
+Iteration 420, loss: 0.6458376675844193
+Iteration 430, loss: 0.6456581908464432
+Iteration 440, loss: 0.6453437221050262
+Iteration 450, loss: 0.6444822037220002
+Iteration 460, loss: 0.6449538189172744
+Iteration 470, loss: 0.6445544886589051
+Iteration 480, loss: 0.6447158342599869
+Iteration 490, loss: 0.6445703917741775
+Iteration 500, loss: 0.6439861053228378
+Iteration 510, loss: 0.6440032923221588
+Iteration 520, loss: 0.6433343976736069
+Iteration 530, loss: 0.6433739173412323
+Iteration 540, loss: 0.6429067558050156
+Iteration 550, loss: 0.6437903368473052
+Iteration 560, loss: 0.6426050758361816
+Epoch 1; time 13.7988

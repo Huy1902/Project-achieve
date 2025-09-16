@@ -1,0 +1,66 @@
+Namespace(model='KRUserResponse', reader='KRDataReader')
+Namespace(seed=19, batch_size=128, lr=0.0003, epoch=1, model_path='output/kr/env/kr_user_env_lr0.0003_reg0.001.model', loss='bce', l2_coef=0.001, feature_dim=16, attn_n_head=2, hidden_dims=[256], dropout_rate=0.2, train_file='dataset/kr/train.csv', val_file='dataset/kr/test.csv', test_file='', n_worker=0, data_separator='@', user_meta_file='dataset/kr/user_info.npy', item_meta_file='dataset/kr/item_info.npy', max_seq_len=50, meta_data_separator=' ')
+init ml1m reader
+Loading data filesLoad item meta data
+{'length': 72757, 'n_item': 11643, 'item_vec_size': 32, 'user_portrait_len': 32, 'max_seq_len': 50, 'n_feedback': 2}
+{'length': 72757, 'n_item': 11643, 'item_vec_size': 32, 'user_portrait_len': 32, 'max_seq_len': 50, 'n_feedback': 2}
+epoch 1 training
+Iteration 10, loss: 0.7188117504119873
+Iteration 20, loss: 0.7169621556997299
+Iteration 30, loss: 0.7131535311539968
+Iteration 40, loss: 0.7102921694517136
+Iteration 50, loss: 0.7081531119346619
+Iteration 60, loss: 0.7065221885840098
+Iteration 70, loss: 0.7041261315345764
+Iteration 80, loss: 0.7027462050318718
+Iteration 90, loss: 0.701683552397622
+Iteration 100, loss: 0.7004508638381958
+Iteration 110, loss: 0.6977582460641861
+Iteration 120, loss: 0.6950855553150177
+Iteration 130, loss: 0.6932761174440384
+Iteration 140, loss: 0.6912860816717148
+Iteration 150, loss: 0.6894315761327744
+Iteration 160, loss: 0.6870607775449753
+Iteration 170, loss: 0.6861506462097168
+Iteration 180, loss: 0.6846779346466064
+Iteration 190, loss: 0.6829167807102203
+Iteration 200, loss: 0.6813267368078232
+Iteration 210, loss: 0.6794260531663895
+Iteration 220, loss: 0.677488511800766
+Iteration 230, loss: 0.67542484998703
+Iteration 240, loss: 0.6740372341871261
+Iteration 250, loss: 0.6727123576402664
+Iteration 260, loss: 0.6712922406196594
+Iteration 270, loss: 0.6692282891273499
+Iteration 280, loss: 0.667755919098854
+Iteration 290, loss: 0.6664090323448181
+Iteration 300, loss: 0.6649660670757294
+Iteration 310, loss: 0.6638354545831681
+Iteration 320, loss: 0.6624332529306411
+Iteration 330, loss: 0.6618159729242324
+Iteration 340, loss: 0.6608826196193696
+Iteration 350, loss: 0.6598820924758911
+Iteration 360, loss: 0.6591502594947815
+Iteration 370, loss: 0.6584605956077576
+Iteration 380, loss: 0.6568634915351867
+Iteration 390, loss: 0.6562312650680542
+Iteration 400, loss: 0.6560604339838028
+Iteration 410, loss: 0.6552366268634796
+Iteration 420, loss: 0.6553402256965637
+Iteration 430, loss: 0.654970691204071
+Iteration 440, loss: 0.6544640719890594
+Iteration 450, loss: 0.6533319842815399
+Iteration 460, loss: 0.6536256271600723
+Iteration 470, loss: 0.6530640918016434
+Iteration 480, loss: 0.6532800662517547
+Iteration 490, loss: 0.6528914248943329
+Iteration 500, loss: 0.6520880609750748
+Iteration 510, loss: 0.6519929140806198
+Iteration 520, loss: 0.6512616002559661
+Iteration 530, loss: 0.6511352628469467
+Iteration 540, loss: 0.6504614949226379
+Iteration 550, loss: 0.651035624742508
+Iteration 560, loss: 0.6497673350572586
+Epoch 1; time 21.2723
+epoch 1 validating; auc: 0.6824
+Model (checkpoint) saved to output/kr/env/kr_user_env_lr0.0003_reg0.001.model

@@ -1,0 +1,20 @@
+Namespace(model='KRUserResponse', reader='KRDataReader')
+Namespace(seed=19, batch_size=128, lr=0.001, epoch=2, model_path='output/kr/env/kr_user_env_lr0.001_reg0.0003.model', loss='bce', l2_coef=0.0003, feature_dim=16, attn_n_head=2, hidden_dims=[256], dropout_rate=0.2, train_file='dataset/kr/KR_seq_data_train.meta', val_file='dataset/kr/KR_seq_data_test.meta', test_file='', n_worker=4, data_separator='@', user_meta_file='dataset/kr/uEmb.npy', item_meta_file='dataset/kr/iEmb.npy', max_seq_len=50, meta_data_separator='\\t')
+init ml1m reader
+Loading data filesLoad item meta data
+{'length': 72757, 'n_item': 11643, 'item_vec_size': 32, 'user_portrait_len': 32, 'max_seq_len': 50, 'n_feedback': 2}
+{'length': 72757, 'n_item': 11643, 'item_vec_size': 32, 'user_portrait_len': 32, 'max_seq_len': 50, 'n_feedback': 2}
+epoch 1 training
+Iteration 10, loss: 0.7115889430046082
+Iteration 20, loss: 0.7056042045354843
+Iteration 30, loss: 0.7004336357116699
+Iteration 40, loss: 0.6967270478606225
+Iteration 50, loss: 0.6938365709781646
+Iteration 60, loss: 0.6918104688326517
+Iteration 70, loss: 0.6889277023928506
+Iteration 80, loss: 0.6863468557596206
+Iteration 90, loss: 0.6841256300608317
+Iteration 100, loss: 0.6817834645509719
+Iteration 110, loss: 0.6764968091249466
+Early stop manually
+Exit completely without evaluation? (y/n) (default n):
