@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "1f6b084e8474922a",
+    "type": "split",
+    "children": [
+      {
+        "id": "187c4eb5c719e23c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "95663f6d61ec05ec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Final Exam OOP/Lecture 6 - 7. Inheritance and Polymorphism.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lecture 6 - 7. Inheritance and Polymorphism"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "946fd31a0a2c8c61",
+    "type": "split",
+    "children": [
+      {
+        "id": "a04ef812d245c2be",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d4e72c7885d9d9eb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "93545510f53e4362",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "eec6db81d49b1d68",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200.5
+  },
+  "right": {
+    "id": "ea68d7b6e8a6c9a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "9fa2d09ee4bdd2d7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "26305ff0558e856f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "About Google API Book.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for About Google API Book"
+            }
+          },
+          {
+            "id": "4d94a28dbf01311a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "About Google API Book.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from About Google API Book"
+            }
+          },
+          {
+            "id": "3485d75e647651c6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a91a9d7211d6d566",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "About Google API Book.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of About Google API Book"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "95663f6d61ec05ec",
+  "lastOpenFiles": [
+    "Final Exam OOP/Lecture 5. Inheritance.md",
+    "Final Exam OOP/Lecture 6 - 7. Inheritance and Polymorphism.md",
+    "Final Exam OOP/Lecture 3 - 4. Java (cont.).md",
+    "Untitled.md",
+    "Final Exam OOP/Lecture 1. Introduce.md",
+    "Final Exam OOP/Lecture 2. Class and Object.md",
+    "Final Exam DSA/Theory/Lecture 15. Shortest Paths.md",
+    "Untitled",
+    "Final Exam OOP",
+    "Final Exam DSA/Exam/Lecture 15.md",
+    "Final Exam DSA/Theory/Lecture 14 Minimum spanning tree.md",
+    "Final Exam DSA/Theory/Lecture 13. Directed Graph.md",
+    "Final Exam DSA/Theory/Lecture 12. Undirected graphs.md",
+    "Final Exam DSA/Theory/Lecture 11. Hash Tables.md",
+    "Final Exam DSA/Theory/Lecture 9 + 10. Symbol table. Binary Search Tree. 2 - 3 Tree. Red-Black Tree.md",
+    "Final Exam DSA/Theory/Lecture 4 + 5 + 6. Sorts Algorithm.md",
+    "Final Exam DSA/Theory/Lecture 8. Priority Queue.md",
+    "Final Exam DSA/Theory/Lecture 3. Stack And Queue.md",
+    "Final Exam DSA/Theory/Lecture 2. Analysis of Algorithm.md",
+    "Pasted image 20241226004900.png",
+    "Pasted image 20241225233251.png",
+    "Pasted image 20241225231835.png",
+    "Pasted image 20241225225155.png",
+    "Final Exam DSA/Exam/Lecture 2.md",
+    "Final Exam DSA/Exam/Lecture 13.md",
+    "Pasted image 20241225111602.png",
+    "Pasted image 20241225105747.png",
+    "Final Exam DSA/Exam/Lecture 12.md",
+    "Pasted image 20241225013249.png",
+    "Pasted image 20241223220656.png",
+    "Pasted image 20241223165931.png",
+    "Pasted image 20241223163616.png",
+    "Final Exam DSA/Theory/Untitled.canvas",
+    "Final Exam DSA/Exam/Lecture 9.md",
+    "Final Exam DSA/Exam/Lecture 4 + 5 + 6.md",
+    "Final Exam DSA/Exam/Lecture 8.md",
+    "Final Exam DSA/Exam/Lecture 3.md",
+    "Final Exam DSA/Exam",
+    "Final Exam DSA/Theory",
+    "Final Exam DSA",
+    "Untitled/Untitled 1",
+    "Idea AI.md",
+    "About Spring Mail.md"
+  ]
+}
