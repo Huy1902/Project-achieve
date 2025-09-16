@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<STATES>
+ <MENU>
+  <TEXTURES>
+   <texture filename="assets/play.png" ID="playbutton"/>
+   <texture filename="assets/exit.png" ID="exitbutton"/>
+  </TEXTURES>
+  <OBJECTS>
+   <object type="MenuButton" x="100" y="100" width="100" height="25" textureID="playbutton" numFrames="3" callbackID="1"/>
+   <object type="MenuButton" x="100" y="300" width="100" height="25" textureID="exitbutton" numFrames="3" callbackID="2"/>
+  </OBJECTS>
+ </MENU>
+ <PLAY>
+  <TEXTURES>
+   <texture filename="assets/Knight_player_1.3/Knight_player/Walking_KG_1.png" ID="walking1"/>
+   <texture filename="assets/Knight_player_1.3/Knight_player/Walking_KG_2.png" ID="walking2"/>
+  </TEXTURES>
+  <OBJECTS>
+   <object type="Player" x="500" y="100" width="100" height="64" textureID="walking1" numFrames="7"/>
+   <object type="Enemy" x="100" y="100" width="100" height="64" textureID="walking2" numFrames="7"/>
+  </OBJECTS>
+ </PLAY>
+ <PAUSE>
+  <TEXTURES>
+   <texture filename="assets/resume.png" ID="resumebutton"/>
+   <texture filename="assets/main.png" ID="mainbutton"/>
+  </TEXTURES>
+  <OBJECTS>
+   <object type="MenuButton" x="200" y="100" width="100" height="40" textureID="mainbutton" numFrames="3" callbackID="1"/>
+   <object type="MenuButton" x="200" y="300" width="100" height="40" textureID="resumebutton" numFrames="3" callbackID="2"/>
+  </OBJECTS>
+ </PAUSE>
+ <GAMEOVER>
+  <TEXTURES>
+   <texture filename="assets/game_over.png" ID="gameovertext"/>
+   <texture filename="assets/main.png" ID="mainbutton"/>
+   <texture filename="assets/restart.png" ID="restartbutton"/>
+  </TEXTURES>
+  <OBJECTS>
+   <object type="AnimatedGraphic" x="200" y="100" width="200" height="30" textureID="gameovertext" numFrames="2" animSpeed="2"/>
+   <object type="MenuButton" x="200" y="200" width="100" height="40" textureID="mainbutton" numFrames="3" callbackID="1"/>
+   <object type="MenuButton" x="200" y="300" width="100" height="30" textureID="restartbutton" numFrames="3" callbackID="2"/>
+  </OBJECTS>
+ </GAMEOVER>
+</STATES>

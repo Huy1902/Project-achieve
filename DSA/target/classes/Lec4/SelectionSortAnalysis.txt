@@ -1,0 +1,2 @@
+Upon conducting multiple trials, it is evident that the average sum of coefficients remains constant over time.
+Therefore, we can infer that the running time is directly proportional to the input size with a constant coefficient.
